@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>       // plik nagłówkowy do stringów
+
+using namespace std;    // przestrzeń nazw
+
+  int i, l=0;
+  class CharDiff        // klasa 
+  {
+    string str1, str2;  // stringi
+    public:
+      int count()       // funkcja count
+      {
+        cin >> str1;    // pobierz string
+        cin >> str2;    
+        if (strlen("AACD") != strlen("ABCD"))   // jeśli różne
+          cout << "Blad";
+        for(i = 0; i < strlen("AACD"); i++)     // pętla 
+        {
+          if(str1[i] != str2[i])                // jeśli różne
+          l++;                                  // inkrementacja 
+        }
+        cout << l;      // output var l
+      }
+  };
+
+int main()
+{
+  CharDiff a;           // twórz obiekt klasy CharDiff
+  a.count();            // przywołaj funkcję 
+  return 0;             // the end
+}
